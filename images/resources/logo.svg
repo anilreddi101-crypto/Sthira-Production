@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 55" width="260" height="55">
+  <defs>
+    <style>
+      .brand-mark { fill: #c61427; }
+      .brand-name { font-family: 'Poppins', 'Montserrat', 'Helvetica Neue', sans-serif; font-size: 23px; font-weight: 800; fill: #1d1d1d; letter-spacing: 0.5px; }
+      .brand-sub { font-family: 'Poppins', 'Montserrat', sans-serif; font-size: 8.5px; font-weight: 600; fill: #7e7e7e; letter-spacing: 3.5px; }
+    </style>
+  </defs>
+  
+  <!-- Architectural Mark -->
+  <g transform="translate(0, 3)">
+    <!-- Roof / Outer frame -->
+    <path class="brand-mark" d="M24 0 L48 18 L48 40 L38 40 L38 22 L24 11 L10 22 L10 40 L0 40 L0 18 Z" />
+    <!-- Inner column / Pillar -->
+    <rect class="brand-mark" x="18" y="18" width="6" height="22" />
+    <rect class="brand-mark" x="28" y="24" width="6" height="16" />
+    <!-- Base line -->
+    <rect class="brand-mark" x="0" y="44" width="48" height="4" rx="1" />
+  </g>
+  
+  <!-- Brand Text -->
+  <text x="60" y="30" class="brand-name">STHIRA <tspan fill="#c61427">LIVING</tspan></text>
+  <text x="61" y="46" class="brand-sub">BESPOKE INTERIORS</text>
+</svg>
