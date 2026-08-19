@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get Instant Interior Estimate || Sthira Living Hyderabad</title>
+    <meta name="description" content="Calculate the exact interior design cost for your 1 BHK, 2 BHK, 3 BHK, 4 BHK or Villa in Hyderabad with Sthira Living's instant interior cost calculator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Base and Calculator Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/calculator.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+</head>
+
+<body class="calc-page-body">
+
+    <!-- Top Sticky Header with Stepper -->
+    <header class="calc-top-header">
+        <div class="calc-top-progress-bar">
+            <div class="calc-top-progress-fill" id="topProgressFill"></div>
+        </div>
+        <div class="calc-header-inner">
+            <div class="calc-logo">
+                <a href="index.html">
+                    <img src="images/sthira_logo.png" alt="Sthira Living">
+                </a>
+            </div>
+
+            <!-- Stepper Progress Navigator -->
+            <nav class="calc-stepper-nav">
+                <div class="calc-step-item active" data-step="1">
+                    <span class="step-circle">1</span>
+                    <span class="step-label">BHK Type</span>
+                </div>
+                <div class="calc-step-divider"></div>
+                <div class="calc-step-item" data-step="2">
+                    <span class="step-circle">2</span>
+                    <span class="step-label">Rooms to Design</span>
+                </div>
+                <div class="calc-step-divider"></div>
+                <div class="calc-step-item" data-step="3">
+                    <span class="step-circle">3</span>
+                    <span class="step-label">Package & Finish</span>
+                </div>
+                <div class="calc-step-divider"></div>
+                <div class="calc-step-item" data-step="4">
+                    <span class="step-circle">4</span>
+                    <span class="step-label">Send to WhatsApp</span>
+                </div>
+            </nav>
+
+            <div class="calc-header-exit">
+                <a href="index.html">
+                    <span>✕</span> Exit to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="calc-main-wrapper">
+        <div class="calc-card-container">
+
+            <!-- Loading Spinner Overlay -->
+            <div class="calc-loading-overlay" id="loadingOverlay">
+                <div class="calc-spinner"></div>
+                <div class="calc-loading-text">Preparing Your WhatsApp Requirement Summary...</div>
+            </div>
+
+            <!-- ================= STEP 1: BHK TYPE & SIZE ================= -->
+            <div class="calc-step-view active" data-step="1">
+                <div class="calc-step-header">
+                    <span class="calc-step-tag">Step 1 of 4</span>
+                    <h1 class="calc-step-title">Select your BHK type</h1>
+                    <p class="calc-step-subtitle">Tell us about your home floor plan to tailor your quote</p>
+                </div>
+
+                <div class="bhk-options-list">
+                    <!-- 1 BHK -->
+                    <div class="bhk-item-box" data-bhk="1 BHK">
+                        <div class="bhk-main-row">
+                            <div class="bhk-radio-label">
+                                <span class="custom-radio"></span>
+                                <span>1 BHK</span>
+                            </div>
+                            <span class="bhk-arrow-icon">▼</span>
+                        </div>
+                        <div class="bhk-sub-sizes">
+                            <div class="size-subgrid">
+                                <div class="size-pill-option selected" data-size="small">
+                                    <div class="size-pill-title">Standard Size</div>
+                                    <div class="size-pill-desc">Below 650 sq ft</div>
+                                </div>
+                                <div class="size-pill-option" data-size="large">
+                                    <div class="size-pill-title">Spacious 1 BHK</div>
+                                    <div class="size-pill-desc">Above 650 sq ft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 BHK -->
+                    <div class="bhk-item-box" data-bhk="2 BHK">
+                        <div class="bhk-main-row">
+                            <div class="bhk-radio-label">
+                                <span class="custom-radio"></span>
+                                <span>2 BHK</span>
+                            </div>
+                            <span class="bhk-arrow-icon">▼</span>
+                        </div>
+                        <div class="bhk-sub-sizes">
+                            <div class="size-subgrid">
+                                <div class="size-pill-option selected" data-size="small">
+                                    <div class="size-pill-title">Compact 2 BHK</div>
+                                    <div class="size-pill-desc">Below 1,000 sq ft</div>
+                                </div>
+                                <div class="size-pill-option" data-size="large">
+                                    <div class="size-pill-title">Spacious 2 BHK</div>
+                                    <div class="size-pill-desc">Above 1,000 sq ft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 BHK (Default Selected) -->
+                    <div class="bhk-item-box selected" data-bhk="3 BHK">
+                        <div class="bhk-main-row">
+                            <div class="bhk-radio-label">
+                                <span class="custom-radio"></span>
+                                <span>3 BHK <span style="font-size:12px; font-weight:700; color:#e9212e; margin-left:6px; background:#fff0f1; padding:2px 8px; border-radius:10px;">Popular</span></span>
+                            </div>
+                            <span class="bhk-arrow-icon">▼</span>
+                        </div>
+                        <div class="bhk-sub-sizes">
+                            <div class="size-subgrid">
+                                <div class="size-pill-option selected" data-size="small">
+                                    <div class="size-pill-title">Compact 3 BHK</div>
+                                    <div class="size-pill-desc">Below 1,400 sq ft</div>
+                                </div>
+                                <div class="size-pill-option" data-size="large">
+                                    <div class="size-pill-title">Large 3 BHK</div>
+                                    <div class="size-pill-desc">Above 1,400 sq ft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 BHK -->
+                    <div class="bhk-item-box" data-bhk="4 BHK">
+                        <div class="bhk-main-row">
+                            <div class="bhk-radio-label">
+                                <span class="custom-radio"></span>
+                                <span>4 BHK</span>
+                            </div>
+                            <span class="bhk-arrow-icon">▼</span>
+                        </div>
+                        <div class="bhk-sub-sizes">
+                            <div class="size-subgrid">
+                                <div class="size-pill-option selected" data-size="small">
+                                    <div class="size-pill-title">Standard 4 BHK</div>
+                                    <div class="size-pill-desc">Below 2,200 sq ft</div>
+                                </div>
+                                <div class="size-pill-option" data-size="large">
+                                    <div class="size-pill-title">Grand 4 BHK</div>
+                                    <div class="size-pill-desc">Above 2,200 sq ft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5 BHK+ / Villa -->
+                    <div class="bhk-item-box" data-bhk="5 BHK+">
+                        <div class="bhk-main-row">
+                            <div class="bhk-radio-label">
+                                <span class="custom-radio"></span>
+                                <span>5 BHK+ / Luxury Villa</span>
+                            </div>
+                            <span class="bhk-arrow-icon">▼</span>
+                        </div>
+                        <div class="bhk-sub-sizes">
+                            <div class="size-subgrid">
+                                <div class="size-pill-option selected" data-size="small">
+                                    <div class="size-pill-title">Luxury Duplex</div>
+                                    <div class="size-pill-desc">2,500 - 3,500 sq ft</div>
+                                </div>
+                                <div class="size-pill-option" data-size="large">
+                                    <div class="size-pill-title">Bespoke Villa / Triplex</div>
+                                    <div class="size-pill-desc">3,500+ sq ft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= STEP 2: ROOMS TO DESIGN ================= -->
+            <div class="calc-step-view" data-step="2">
+                <div class="calc-step-header">
+                    <span class="calc-step-tag">Step 2 of 4</span>
+                    <h2 class="calc-step-title">Select the rooms you'd like us to design</h2>
+                    <p class="calc-step-subtitle">Adjust room quantities to match your exact floor plan</p>
+                </div>
+
+                <div class="rooms-grid-container">
+                    <!-- Living Room -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🛋️</div>
+                            <div>
+                                <div class="room-name-label">Living Room</div>
+                                <div class="room-detail-note">TV unit, accent panelling, console</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="living" data-action="dec">−</button>
+                            <span class="counter-value" data-room="living">1</span>
+                            <button type="button" class="counter-btn" data-room="living" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Modular Kitchen -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🍳</div>
+                            <div>
+                                <div class="room-name-label">Modular Kitchen</div>
+                                <div class="room-detail-note">Base & wall cabinets, quartz counter, chimney duct</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="kitchen" data-action="dec">−</button>
+                            <span class="counter-value" data-room="kitchen">1</span>
+                            <button type="button" class="counter-btn" data-room="kitchen" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Bedrooms -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🛏️</div>
+                            <div>
+                                <div class="room-name-label">Bedrooms</div>
+                                <div class="room-detail-note">Wardrobes, bed headboards, side tables</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="bedroom" data-action="dec">−</button>
+                            <span class="counter-value" data-room="bedroom">3</span>
+                            <button type="button" class="counter-btn" data-room="bedroom" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Bathrooms -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🚿</div>
+                            <div>
+                                <div class="room-name-label">Bathrooms & Vanity</div>
+                                <div class="room-detail-note">Waterproof vanity units, mirrors & cabinets</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="bathroom" data-action="dec">−</button>
+                            <span class="counter-value" data-room="bathroom">3</span>
+                            <button type="button" class="counter-btn" data-room="bathroom" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Dining -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🍽️</div>
+                            <div>
+                                <div class="room-name-label">Dining Area</div>
+                                <div class="room-detail-note">Crockery cabinet & bar console</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="dining" data-action="dec">−</button>
+                            <span class="counter-value" data-room="dining">1</span>
+                            <button type="button" class="counter-btn" data-room="dining" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Balcony -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🌿</div>
+                            <div>
+                                <div class="room-name-label">Balcony & Sit-out</div>
+                                <div class="room-detail-note">WPC deck tiles, green wall & lounge lighting</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="balcony" data-action="dec">−</button>
+                            <span class="counter-value" data-room="balcony">1</span>
+                            <button type="button" class="counter-btn" data-room="balcony" data-action="inc">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Pooja Room -->
+                    <div class="room-counter-card">
+                        <div class="room-info-left">
+                            <div class="room-icon-badge">🪔</div>
+                            <div>
+                                <div class="room-name-label">Pooja Mandir Unit</div>
+                                <div class="room-detail-note">Backlit Corian / CNC jaali & storage drawers</div>
+                            </div>
+                        </div>
+                        <div class="counter-actions-box">
+                            <button type="button" class="counter-btn" data-room="pooja" data-action="dec">−</button>
+                            <span class="counter-value" data-room="pooja">0</span>
+                            <button type="button" class="counter-btn" data-room="pooja" data-action="inc">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= STEP 3: PACKAGE SELECTION ================= -->
+            <div class="calc-step-view" data-step="3">
+                <div class="calc-step-header">
+                    <span class="calc-step-tag">Step 3 of 4</span>
+                    <h2 class="calc-step-title">Pick your interior package</h2>
+                    <p class="calc-step-subtitle">Choose the material quality and craftsmanship level for your home</p>
+                </div>
+
+                <div class="packages-grid">
+                    <!-- Essentials -->
+                    <div class="package-card" data-package="essentials">
+                        <img src="images/services/v2-1.jpg" alt="Essentials Package" class="package-card-img">
+                        <div class="package-card-body">
+                            <div class="package-title-row">
+                                <h3 class="package-name">Essentials</h3>
+                                <span class="package-price-tier">₹₹</span>
+                            </div>
+                            <p class="package-short-desc">Essential high-quality modular solutions for rental or budget-conscious living.</p>
+                            <ul class="package-features-list">
+                                <li><i>✓</i> Commercial BWR Grade Plywood</li>
+                                <li><i>✓</i> 1mm Anti-fingerprint Matte Laminates</li>
+                                <li><i>✓</i> Hettich Soft-Close Hardware</li>
+                                <li><i>✓</i> Modular Kitchen with Wire Baskets</li>
+                                <li><i>✓</i> Standard False Ceiling & LED COBs</li>
+                                <li><i>✓</i> 10-Year Woodwork Warranty</li>
+                            </ul>
+                            <div class="package-select-indicator">
+                                <span class="custom-radio"></span> Select Essentials
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium (Default Selected) -->
+                    <div class="package-card selected" data-package="premium">
+                        <span class="package-badge-popular">Most Popular</span>
+                        <img src="images/resources/about-style2-image.jpg" alt="Premium Package" class="package-card-img">
+                        <div class="package-card-body">
+                            <div class="package-title-row">
+                                <h3 class="package-name">Premium</h3>
+                                <span class="package-price-tier">₹₹₹</span>
+                            </div>
+                            <p class="package-short-desc">Superior contemporary interiors crafted for luxury comfort and elevated aesthetics.</p>
+                            <ul class="package-features-list">
+                                <li><i>✓</i> HDHMR & Marine Grade Calibrated Ply</li>
+                                <li><i>✓</i> High-Gloss Acrylic & PU Polish Finishes</li>
+                                <li><i>✓</i> Fluted Louvers & Profile Ambient Lighting</li>
+                                <li><i>✓</i> Tinted Glass Sliding Wardrobes</li>
+                                <li><i>✓</i> Quartz Countertops & Tandem Drawers</li>
+                                <li><i>✓</i> Saint-Gobain Gyproc Designer Ceilings</li>
+                                <li><i>✓</i> 10-Year Comprehensive Warranty</li>
+                            </ul>
+                            <div class="package-select-indicator">
+                                <span class="custom-radio"></span> Selected Premium
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luxury -->
+                    <div class="package-card" data-package="luxury">
+                        <img src="images/services/3.jpg" alt="Luxury Package" class="package-card-img">
+                        <div class="package-card-body">
+                            <div class="package-title-row">
+                                <h3 class="package-name">Luxury / Villa</h3>
+                                <span class="package-price-tier">₹₹₹₹</span>
+                            </div>
+                            <p class="package-short-desc">Bespoke architectural luxury with natural veneers, Italian marble and automation.</p>
+                            <ul class="package-features-list">
+                                <li><i>✓</i> Natural Wood Veneers & Italian PU Polish</li>
+                                <li><i>✓</i> Italian Marble & Onyx Feature TV Walls</li>
+                                <li><i>✓</i> Walk-in Wardrobes with Sensor LEDs</li>
+                                <li><i>✓</i> Smart Home Automation (Lights/Curtains)</li>
+                                <li><i>✓</i> German Mechanism Kitchen (Bosch Ready)</li>
+                                <li><i>✓</i> Bespoke Artisanal Loose Furniture</li>
+                                <li><i>✓</i> Lifetime Design & Build Support</li>
+                            </ul>
+                            <div class="package-select-indicator">
+                                <span class="custom-radio"></span> Select Luxury
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= STEP 4: YOUR DETAILS & DIRECT WHATSAPP ================= -->
+            <div class="calc-step-view" data-step="4">
+                <div class="calc-step-header">
+                    <span class="calc-step-tag">Step 4 of 4</span>
+                    <h2 class="calc-step-title">Almost Done!</h2>
+                    <p class="calc-step-subtitle">Enter your contact details to send your customized floor plan directly to our architects on WhatsApp</p>
+                </div>
+
+                <div class="calc-lead-form-box">
+                    <!-- Name Input -->
+                    <div class="calc-form-group">
+                        <label class="calc-form-label" for="leadName">Your Full Name *</label>
+                        <input type="text" id="leadName" class="calc-input-field" placeholder="e.g. Srinivas Dasari" required>
+                    </div>
+
+                    <!-- Phone Input -->
+                    <div class="calc-form-group">
+                        <label class="calc-form-label" for="leadPhone">Phone Number * (WhatsApp Connected)</label>
+                        <div class="calc-phone-group">
+                            <span class="phone-prefix">🇮🇳 +91</span>
+                            <input type="tel" id="leadPhone" class="calc-input-field" placeholder="Enter 10-digit number" maxlength="10" required>
+                        </div>
+                    </div>
+
+                    <!-- City / Locality -->
+                    <div class="calc-form-group">
+                        <label class="calc-form-label" for="leadCity">Property Location / Area in Hyderabad</label>
+                        <select id="leadCity" class="calc-input-field">
+                            <option value="Hyderabad - Gachibowli">Hyderabad - Gachibowli</option>
+                            <option value="Hyderabad - Jubilee Hills">Hyderabad - Jubilee Hills</option>
+                            <option value="Hyderabad - Banjara Hills">Hyderabad - Banjara Hills</option>
+                            <option value="Hyderabad - Madhapur / Hitec City">Hyderabad - Madhapur / Hitec City</option>
+                            <option value="Hyderabad - Kondapur">Hyderabad - Kondapur</option>
+                            <option value="Hyderabad - Financial District">Hyderabad - Financial District</option>
+                            <option value="Hyderabad - Kokapet">Hyderabad - Kokapet</option>
+                            <option value="Hyderabad - Shamirpet">Hyderabad - Shamirpet</option>
+                            <option value="Hyderabad - Tellapur / Nallagandla">Hyderabad - Tellapur / Nallagandla</option>
+                            <option value="Hyderabad - Kukatpally / Miyapur">Hyderabad - Kukatpally / Miyapur</option>
+                            <option value="Hyderabad - Secunderabad">Hyderabad - Secunderabad</option>
+                            <option value="Other City in Telangana / AP">Other City in Telangana / AP</option>
+                        </select>
+                    </div>
+
+                    <!-- Possession Timeline -->
+                    <div class="calc-form-group">
+                        <label class="calc-form-label" for="leadPossession">When are you taking possession?</label>
+                        <select id="leadPossession" class="calc-input-field">
+                            <option value="Ready to Move / Already have possession">Ready to Move / Already have possession</option>
+                            <option value="Within 1 - 3 Months">Within 1 - 3 Months</option>
+                            <option value="In 3 - 6 Months">In 3 - 6 Months</option>
+                            <option value="Under Construction (6+ Months)">Under Construction (6+ Months)</option>
+                        </select>
+                    </div>
+
+                    <!-- WhatsApp Consent -->
+                    <div class="calc-form-group">
+                        <label class="calc-checkbox-label">
+                            <input type="checkbox" id="leadWhatsapp" checked>
+                            <span>I agree to send these project details to Sthira Living on WhatsApp for direct design assistance.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= STEP 5: WHATSAPP SUCCESS CONFIRMATION ================= -->
+            <div class="calc-step-view" data-step="5">
+                <div class="whatsapp-confirmation-card">
+
+                    <!-- Success Icon -->
+                    <div class="conf-success-icon-badge">
+                        <span class="conf-check">✓</span>
+                    </div>
+
+                    <h2 class="conf-title">Requirements Sent to WhatsApp!</h2>
+                    <p class="conf-subtitle">
+                        Thank you, <strong id="confClientName" style="color:#1b1c20;">Client</strong>! Your custom interior design requirement has been formatted and forwarded directly to <strong>Sthira Living (+91 99499 61100)</strong> on WhatsApp.
+                    </p>
+
+                    <!-- Summary Card -->
+                    <div class="conf-summary-box">
+                        <div class="conf-summary-header">
+                            <span>📋 Project Summary Sent</span>
+                            <span class="conf-status-tag">Ready for Consultation</span>
+                        </div>
+                        <div class="conf-summary-grid">
+                            <div class="conf-grid-item">
+                                <span class="conf-item-label">Client Contact</span>
+                                <span class="conf-item-val" id="confClientPhone">+91 9949961100</span>
+                            </div>
+                            <div class="conf-grid-item">
+                                <span class="conf-item-label">Location & Status</span>
+                                <span class="conf-item-val" id="confLocation">Hyderabad - Gachibowli</span>
+                            </div>
+                            <div class="conf-grid-item">
+                                <span class="conf-item-label">Floor Plan</span>
+                                <span class="conf-item-val" id="confFloorPlan">3 BHK (Spacious)</span>
+                            </div>
+                            <div class="conf-grid-item">
+                                <span class="conf-item-label">Selected Package</span>
+                                <span class="conf-item-val" id="confPackage" style="color:#e9212e; font-weight:700;">Premium (₹₹₹)</span>
+                            </div>
+                            <div class="conf-grid-item full-width">
+                                <span class="conf-item-label">Rooms Included</span>
+                                <span class="conf-item-val" id="confRoomsSummary">Living Room: 1 | Modular Kitchen: 1 | Bedrooms: 3 | Bathrooms: 3 | Dining: 1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="conf-actions-grid">
+                        <a href="https://wa.me/919949961100" target="_blank" class="btn-conf-whatsapp" id="confWhatsappLink">
+                            <span style="font-size:22px;">💬</span> Open WhatsApp Chat
+                        </a>
+                        <a href="tel:+919949961100" class="btn-conf-call">
+                            <span style="font-size:18px;">📞</span> Call Architect (+91 99499 61100)
+                        </a>
+                    </div>
+
+                    <!-- Restart / Modify Button -->
+                    <div style="text-align:center; margin-top:20px;">
+                        <button type="button" class="btn-text-action" id="restartBtn">
+                            🔄 Submit Another Requirement / Start Over
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Navigation Bar for Steps 1 - 4 -->
+            <div class="calc-nav-footer">
+                <button type="button" class="btn-calc-back" id="btnBack" disabled>
+                    ← Back
+                </button>
+                <button type="button" class="btn-calc-next" id="btnNext">
+                    Next <span style="font-size:16px;">→</span>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Quiz Engine Script -->
+    <script src="js/calculator.js"></script>
+
+</body>
+
+</html>

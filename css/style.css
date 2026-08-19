@@ -3742,26 +3742,23 @@ select:focus {
 .about-style2-text .authorised-info{
     position: relative;
     display: block;
-}
-.about-style2-text .authorised-info .signature{
-    width: 185px;
-}
-.about-style2-text .authorised-info .signature,
-.about-style2-text .authorised-info .name{
-    display: table-cell;
-    vertical-align: middle;
+    margin-bottom: 30px;
 }
 .about-style2-text .authorised-info .name{
-    border-left: 1px solid #ededed;
-    padding-left: 20px;
+    display: block;
+    border-left: 3px solid #e9212e;
+    padding-left: 15px;
 }
 .about-style2-text .authorised-info .name h3{
     color: #27282c;
-    font-weight: 600;
-    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
 }
 .about-style2-text .authorised-info .name p{
     color: #e9212e;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 20px;
     margin: 0;
 }
@@ -3890,7 +3887,7 @@ select:focus {
 .single-working-box-style2{
     position: relative;
     display: block;
-    width: 25%;
+    width: 33.333333%;
     float: left;
 }
 .single-working-box-style2 .img-holder{
@@ -3904,7 +3901,7 @@ select:focus {
     transition: all 700ms ease;    
 }
 .single-working-box-style2:hover .img-holder img {
-    transform: scale(1.2);    
+    transform: scale(1.15);    
 }
 .single-working-box-style2 .static-content{
     position: absolute;
@@ -3922,7 +3919,7 @@ select:focus {
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
-    transition: all 900ms ease 100ms;    
+    transition: all 500ms ease;    
 }
 .single-working-box-style2 .static-content .box{
     display: table;
@@ -3985,13 +3982,15 @@ select:focus {
     height: 100%;
     z-index: 3;
     opacity: 0;
+    background: rgba(18, 20, 26, 0.92);
+    backdrop-filter: blur(4px);
     transform: translateY(100%);
-    transition: all 300ms ease 100ms;
+    transition: all 400ms ease;
 }
 .single-working-box-style2:hover .overlay-content{
     opacity: 1;
-    transform: translateY(-10px);
-    transition: all 900ms ease 300ms; 
+    transform: translateY(0);
+    transition: all 400ms ease; 
 }
 .single-working-box-style2 .overlay-content .box{
     display: table;
@@ -4001,22 +4000,33 @@ select:focus {
 .single-working-box-style2 .overlay-content .box .inner{
     display: table-cell;
     vertical-align: middle;
-    text-align: center;    
+    text-align: center;
+    padding: 20px 25px;
 }
 .single-working-box-style2 .overlay-content .icon-holder {
-    margin: 0 auto 50px;
+    margin: 0 auto 25px;
     border: 2px solid #e9212e;
     background: #e9212e;
+}
+.single-working-box-style2 .overlay-content .text-holder .title h3{
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 .single-working-box-style2 .text-holder .text{
     position: relative;
     display: block;
-    padding: 0 20px;
-    margin-top: 34px;
+    padding: 0 10px;
+    margin-top: 15px;
 }
 .single-working-box-style2 .text-holder .text p{
-    color: #7c7e84;
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 22px;
     margin: 0;
+    font-weight: 400;
 }
 .single-working-box-style2 .read-more a span:before {
     position: absolute;
@@ -4690,6 +4700,10 @@ select:focus {
     background-repeat: no-repeat;
     padding: 110px 0 110px;
     z-index: 1;
+}
+.working-process-style2-area .sec-title .title,
+.working-process-style2-area .sec-title .title span {
+    color: #ffffff !important;
 }
 .single-working-process-style2{
     position: relative;
@@ -13641,10 +13655,472 @@ li .single-footer-contact-info .text p span{
     }
 }
 
+/*** 
+=============================================
+    Trusted Partners Area Style
+=============================================
+***/
+.trusted-partners-area {
+    position: relative;
+    display: block;
+    background: #fafbfc;
+    padding: 85px 0 95px;
+    border-top: 1px solid #edf0f3;
+    border-bottom: 1px solid #edf0f3;
+}
+.partners-header {
+    margin-bottom: 40px;
+    text-align: left;
+}
+.partners-title {
+    color: #27282c;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+}
+.partners-subtitle {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.partner-card {
+    background: #ffffff;
+    border: 1px solid #e5e9ee;
+    border-radius: 12px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+    border-color: #d1d9e2;
+}
+.partner-logo {
+    width: 100%;
+    max-width: 150px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner-logo img {
+    max-width: 100%;
+    max-height: 44px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.partner-card:hover .partner-logo img {
+    transform: scale(1.05);
+}
 
+@media only screen and (max-width: 1199px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .trusted-partners-area {
+        padding: 55px 0 60px;
+    }
+    .partners-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .partners-subtitle {
+        font-size: 15px;
+    }
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .partner-card {
+        padding: 16px 10px;
+        min-height: 75px;
+    }
+    .partner-logo {
+        height: 38px;
+    }
+    .partner-logo img {
+        max-height: 34px;
+    }
+}
 
+@media only screen and (max-width: 480px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
+/*** 
+====================================================================
+    Homes For Every Budget Section Styles (Exact Livspace UX Match)
+====================================================================
+***/
+.homes-budget-area {
+    position: relative;
+    display: block;
+    background: #f4f5f7;
+    padding: 80px 0 90px;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
 
+.homes-budget-header {
+    margin-bottom: 35px;
+}
 
+.homes-budget-title-box .sub-tag {
+    display: inline-block;
+    color: #e9212e;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    background: #fff0f1;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+.homes-budget-title {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0 0 8px;
+    font-family: 'Rubik', 'Poppins', sans-serif;
+}
+
+.homes-budget-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    color: #64748b;
+    margin: 0;
+    max-width: 650px;
+}
+
+.header-cta-col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-budget-quote {
+    background: #e9212e;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 13px 32px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 33, 46, 0.3);
+}
+
+.btn-budget-quote:hover {
+    background: #c81521;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(233, 33, 46, 0.4);
+}
+
+/* Carousel Container & Side Controls */
+.homes-budget-carousel-wrapper {
+    position: relative;
+    padding: 0 10px;
+}
+
+.homes-budget-carousel {
+    position: relative;
+}
+
+/* Budget Card */
+.budget-card-item {
+    padding: 8px 4px;
+}
+
+.budget-card {
+    display: block;
+    position: relative;
+    height: 440px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1e293b;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+}
+
+.budget-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.budget-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.budget-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Floating Price Badge (Top Left Inside Image) */
+.budget-price-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(30, 20, 30, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+/* Overlay & Footer Info (Bottom) */
+.budget-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(15, 23, 42, 0.88) 100%);
+    z-index: 4;
+    display: flex;
+    align-items: flex-end;
+    padding: 22px;
+    pointer-events: none;
+}
+
+.budget-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.budget-card-name {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Rubik', 'Poppins', sans-serif;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.budget-arrow-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.budget-card:hover .budget-arrow-icon {
+    background: #e9212e;
+    border-color: #e9212e;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(233, 33, 46, 0.45);
+}
+
+/* Owl Carousel Floating Side Arrows (Pure White Circle with Crisp Chevron) */
+.homes-budget-carousel-wrapper {
+    position: relative;
+    padding: 0 10px;
+}
+
+.homes-budget-carousel {
+    position: relative;
+}
+
+.homes-budget-carousel .owl-nav,
+.homes-budget-carousel.owl-theme .owl-nav {
+    position: absolute !important;
+    top: 228px !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    display: block !important;
+    pointer-events: none !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+.homes-budget-carousel .owl-nav [class*="owl-"],
+.homes-budget-carousel.owl-theme .owl-nav [class*="owl-"],
+.homes-budget-carousel .owl-nav button.owl-prev,
+.homes-budget-carousel .owl-nav button.owl-next,
+.homes-budget-carousel .owl-nav .owl-prev,
+.homes-budget-carousel .owl-nav .owl-next {
+    position: absolute !important;
+    top: 0 !important;
+    transform: translateY(-50%) !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: #111827 !important;
+    font-size: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.25s ease !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.homes-budget-carousel .owl-nav .owl-prev,
+.homes-budget-carousel .owl-nav button.owl-prev,
+.homes-budget-carousel .owl-nav [class*="owl-prev"] {
+    left: -24px !important;
+    right: auto !important;
+}
+
+.homes-budget-carousel .owl-nav .owl-next,
+.homes-budget-carousel .owl-nav button.owl-next,
+.homes-budget-carousel .owl-nav [class*="owl-next"] {
+    right: -24px !important;
+    left: auto !important;
+}
+
+.homes-budget-carousel .owl-nav [class*="owl-"]:hover,
+.homes-budget-carousel.owl-theme .owl-nav [class*="owl-"]:hover,
+.homes-budget-carousel .owl-nav button.owl-prev:hover,
+.homes-budget-carousel .owl-nav button.owl-next:hover {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #e9212e !important;
+    transform: translateY(-50%) scale(1.1) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+.homes-budget-carousel .owl-nav [class*="owl-"] i,
+.homes-budget-carousel .owl-nav button.owl-prev i,
+.homes-budget-carousel .owl-nav button.owl-next i {
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    color: #111827 !important;
+}
+
+.homes-budget-carousel .owl-nav [class*="owl-"]:hover i,
+.homes-budget-carousel .owl-nav button.owl-prev:hover i,
+.homes-budget-carousel .owl-nav button.owl-next:hover i {
+    color: #e9212e !important;
+}
+
+.homes-budget-carousel .owl-dots {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.homes-budget-carousel .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 4px 6px;
+    background: #cbd5e1;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.homes-budget-carousel .owl-dots .owl-dot.active span {
+    width: 26px;
+    background: #e9212e;
+}
+
+@media only screen and (max-width: 991px) {
+    .homes-budget-header {
+        text-align: left;
+    }
+    .header-cta-col {
+        justify-content: flex-start;
+        margin-top: 16px;
+    }
+    .homes-budget-title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .budget-card {
+        height: 380px;
+    }
+    .homes-budget-carousel .owl-nav {
+        top: 198px !important;
+        left: -10px;
+        right: -10px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .homes-budget-area {
+        padding: 60px 0 70px;
+    }
+    .homes-budget-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .homes-budget-subtitle {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .budget-card {
+        height: 340px;
+    }
+    .homes-budget-carousel .owl-nav {
+        top: 178px !important;
+    }
+}
 
 

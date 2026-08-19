@@ -281,7 +281,6 @@ function tooltip () {
 	if ($('.tool_tip').length) {
 			$('.tool_tip').tooltip();
 		};
-	$
 }
 
 
@@ -572,6 +571,42 @@ function projectCarouselv2 () {
                     items:2
                 },
                 1100:{
+                    items:3
+                },
+                1200:{
+                    items:3
+                }
+            }
+        });    		
+    }
+}
+
+
+
+//=== Homes Budget Carousel ===
+function homesBudgetCarousel () {
+    if ($('.homes-budget-carousel').length) {
+        $('.homes-budget-carousel').owlCarousel({
+            dots: true,
+            loop: true,
+            margin: 24,
+            nav: true,
+            navText: [
+                '<i class="fa fa-chevron-left"></i>',
+                '<i class="fa fa-chevron-right"></i>'
+            ],
+            autoplayHoverPause: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            smartSpeed: 700,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                992:{
                     items:3
                 },
                 1200:{
@@ -1078,6 +1113,7 @@ jQuery(document).on('ready', function () {
         projectCarouselv3();
         testimonialCarouselV2();
         historyCarousel();
+        homesBudgetCarousel();
         
 
    
