@@ -30,7 +30,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $botcheck = $_POST['form_botcheck'];
 
- $toemail = 'abhishek@sthiraliving.in'; // Your Email Address
+ $toemail = 'Info@sthiraliving.in'; // Your Email Address
  $toname = 'Sthira Living'; // Your Name
 
  if( $botcheck == '' ) {
