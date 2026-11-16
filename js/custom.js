@@ -1000,7 +1000,7 @@ if($("#contact-form").length){
                               "🎯 *Service:* " + service + "\n\n" +
                               "💬 *Message:*\n" + message;
 
-            var targetWhatsAppPhone = "919982898289";
+            var targetWhatsAppPhone = "919100007211";
             var whatsappUrl = "https://api.whatsapp.com/send?phone=" + targetWhatsAppPhone + "&text=" + encodeURIComponent(whatsappMsg);
 
             var form_btn_old_msg = form_btn.html();
